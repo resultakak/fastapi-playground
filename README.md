@@ -1,5 +1,11 @@
 # FastAPI Playground
 
+## Use
+
+```bash
+uvicorn main:app --reload
+```
+
 ## API
 
 ```bash
