@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "2576d3c1-6b26-4545-b60f-39cdf2b1b224",
+		"name": "FastAPI Playground",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}ping",
+					"host": [
+						"{{url}}ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}messages",
+					"host": [
+						"{{url}}messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "messages[search]",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}messages?search=Title",
+					"host": [
+						"{{url}}messages"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Title"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "messages/{message_id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}messages/1",
+					"host": [
+						"{{url}}messages"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "messages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Title\",\n    \"body\": \"Lorem ipsum sit dolar amet.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}messages",
+					"host": [
+						"{{url}}messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "messages/{message_id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Title Lorem\",\n    \"body\": \"Lorem ipsum sit dolar amet. Sit dolar amet.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}messages/1",
+					"host": [
+						"{{url}}messages"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "messages/{message_id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}messages/1",
+					"host": [
+						"{{url}}messages"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/"
+		}
+	]
+}
